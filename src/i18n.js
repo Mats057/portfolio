@@ -9,6 +9,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             hi: "Hi,",
             main: "I'm <1>Matheus Queiroz.</1>",
             cargo: "A Software Engineer.",
+            about: "About me",
+            projects: "My Projects",
         },
         },
         pt: {
@@ -16,6 +18,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             hi: "Oi,",
             main: "Sou o <1>Matheus Queiroz.</1>",
             cargo: "Um Engenheiro de Software.",
+            about: "Sobre mim",
+            projects: "Meus Projetos",
         },
         },
     },
