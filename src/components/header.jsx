@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import MainIcon from "/icon.png";
 
 export const Header = () => {
   const [t] = useTranslation();
@@ -27,7 +28,7 @@ export const Header = () => {
 
   return (
     <header className="bg-transparent text-white p-4 px-6 flex w-full justify-between items-center">
-      <h1 className="text-lg text-accent-foreground font-bold">MatheusQZ</h1>
+      <Link to='/' className="text-lg text-accent-foreground font-bold flex items-center"><img className="size-6 mr-2" src={MainIcon} alt="Ícone do site"/>MatheusQZ</Link>
       <div className="relative w-8 h-8 cursor-pointer" onClick={toggleMenu}>
         {isOpen ? (
           <X className="text-accent-foreground w-8 h-8" />

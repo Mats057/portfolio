@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center mx-8 lg:mx-12 lg:min-h-[70vh]">
+      <main className="flex flex-col items-center justify-center mx-8 lg:mx-12 lg:min-h-[70vh] animate-in fade-in duration-1000">
         <section className="flex flex-col lg:flex-row w-full items-center justify-center px-4 mt-8 mb-8 md:mt-4 select-none">
           <div className="text-primary font-extrabold">
             <h3 className="text-3xl md:text-5xl">{t("hi")}</h3>
@@ -34,7 +34,7 @@ function Home() {
                 1000,
               ]}
               wrapper="span"
-              className="text-2xl mt-2 md:text-4xl select-text selection:bg-background selection:text-secondary"
+              className="text-2xl mt-2 md:text-4xl"
               speed={50}
               repeat={Infinity}
             />
