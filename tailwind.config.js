@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 import { fontFamily } from "tailwindcss/defaultTheme";
-import tailwindAnimate from 'tailwindcss-animate';
+import tailwindAnimate from "tailwindcss-animate";
 
 export default {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    './node_modules/shadcn-ui/components/**/*.{js,ts,jsx,tsx}',
+    "./node_modules/shadcn-ui/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     container: {
@@ -76,11 +76,10 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       clipPath: {
-        'full': 'circle(100% at 50% 0)', // Forma totalmente expandida
-        'closed': 'circle(0 at 50% 0)',  // Forma completamente fechada (menu escondido)
+        full: "circle(100% at 50% 0)", // Forma totalmente expandida
+        closed: "circle(0 at 50% 0)", // Forma completamente fechada (menu escondido)
       },
     },
   },
   plugins: [tailwindAnimate],
-}
-
+};
