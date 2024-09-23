@@ -66,3 +66,29 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+@keyframes clipOpen {
+  0% {
+      clip-path: circle(0% at 100% 0%);
+  }
+  100% {
+      clip-path: circle(150% at 50% 50%);
+  }
+}
+
+@keyframes clipClose {
+  0% {
+      clip-path: circle(150% at 50% 50%);
+  }
+  100% {
+      clip-path: circle(0% at 100% 0%);
+  }
+}
+
+.clip-open {
+  animation: clipOpen 0.5s ease-in-out forwards;
+}
+
+.clip-close {
+  animation: clipClose 0.5s ease-in-out forwards;
+}

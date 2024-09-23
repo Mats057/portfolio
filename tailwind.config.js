@@ -75,6 +75,10 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      clipPath: {
+        'full': 'circle(100% at 50% 0)', // Forma totalmente expandida
+        'closed': 'circle(0 at 50% 0)',  // Forma completamente fechada (menu escondido)
+      },
     },
   },
   plugins: [tailwindAnimate],

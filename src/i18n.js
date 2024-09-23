@@ -11,6 +11,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             cargo: "A Software Engineer.",
             about: "About me",
             projects: "My Projects",
+            home: "Home",
+            contact: "Contact"
         },
         },
         pt: {
@@ -20,6 +22,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             cargo: "Um Engenheiro de Software.",
             about: "Sobre mim",
             projects: "Meus Projetos",
+            home: "Página Inicial",
+            contact: "Entrar em contato"
         },
         },
     },
