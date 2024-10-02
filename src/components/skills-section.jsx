@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import { useIsVisible } from "@/hooks/useIsVisible";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";

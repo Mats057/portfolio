@@ -35,6 +35,9 @@ i18n
           front_tools: "Frontend Tools",
           back_tools: "Backend Tools",
           gen_tools: "General Tools",
+          favorite: "My Favorite <1>Projects</1>",
+          details: "More details",
+          technologies: "Technologies: ",
           projectsDesc: {
             hydrosense:
               "HydroSense is a real-time water quality monitoring project. I was responsible for developing 100% of the Arduino prototype, 100% of the real-time monitoring app with Python, and assisting with the project's landing page. It was developed for my first Global Solution at FIAP.",
@@ -43,7 +46,7 @@ i18n
             eletrolucks:
               "It was my first CRUD web project with backend. It's a fictional electronics sales website developed in 2022 as part of my technical course in Systems Development at ETEC.",
             quiz_apple:
-              "This project was proposed by my WEB Programming (PW) teacher at ETEC. It required a login/registration system, a form, and user and results management. The application consists of a main page with information about Apple. If the user wishes, they can log in and answer 10 questions about the text they read. Afterwards, they can view their result and others' results, as well as edit/delete both. The user also has a profile page where they can customize their profile with light/dark theme, change photo, and update data. It was my first project using version control with Git/Github.",
+              "This project was proposed at ETEC and required a login, registration, and user/result management system. The application allows users to take a quiz about Apple and manage their profiles with light/dark theme options and data editing. It was my first project using Git/GitHub.",
             pass_in:
               "This project is part of the NLW - Rocketseat event on Spring Boot, hosted by Fernanda Kipper. It consists of a Java Spring API for a web system that manages events and people's entry. I recreated this API to learn more about Java APIs and Spring Boot.",
             mini_projetos_js:
@@ -85,6 +88,9 @@ i18n
           front_tools: "Ferramentas Frontend",
           back_tools: "Ferramentas Backend",
           gen_tools: "Ferramentas Gerais",
+          favorite: "Meus <1>Projetos</1> Favoritos",
+          details: "Mais detalhes",
+          technologies: "Tecnologias: ",
           projectsDesc: {
             hydrosense:
               "HydroSense é um projeto de monitoramento de qualidade de água em tempo real. Eu fui responsável por desenvolver 100% do protótipo Arduino, 100% do app de monitoramento em tempo real com Python e ajudar na landing page do projeto. Ele foi desenvolvido para a minha primeira Global Solution da FIAP.",
@@ -93,7 +99,7 @@ i18n
             eletrolucks:
               "Foi meu primeiro projeto CRUD Web com backend. Ele é um site de venda de eletrônicos fictício desenvolvido no ano de 2022 como parte do meu curso técnico em Desenvolvimento de Sistemas pela ETEC.",
             quiz_apple:
-              "Esse projeto foi proposto pelo meu professor de PW (Programação WEB) na ETEC. Nele, era necessário um sistema de login/cadastro, formulário e gerenciamento de usuários e resultados. A aplicação consiste em uma página principal com informações sobre a Apple. Caso o usuário queira, ele pode entrar na plataforma e responder a 10 perguntas sobre o texto que leu. Depois disso, poderá ver seu resultado e o de outros usuários, além de alterar/excluir ambos. O usuário também terá uma página onde poderá configurar seu perfil, com tema claro/escuro, alteração de foto e dados. Foi meu primeiro projeto utilizando o versionamento de código com Git/Github.",
+              "Esse projeto foi proposto na ETEC e exigia um sistema de login, cadastro e gerenciamento de usuários e resultados. A aplicação permite que os usuários respondam a um quiz sobre a Apple e gerenciem seus perfis com opções de tema claro/escuro e alteração de dados. Foi meu primeiro projeto usando Git/GitHub.",
             pass_in:
               "Esse projeto é parte do evento NLW - Rocketseat de Spring Boot, palestrado pela Fernanda Kipper. Ele consiste em uma API Java Spring para WEB de um sistema que gerencia eventos e a entrada das pessoas. Eu recriei essa API com o intuito de aprender mais sobre APIs Java e Spring Boot.",
             mini_projetos_js:

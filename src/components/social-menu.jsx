@@ -1,4 +1,3 @@
-
 import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";

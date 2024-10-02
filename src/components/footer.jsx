@@ -3,8 +3,8 @@ import { IoMdMail } from "react-icons/io";
 
 export const Footer = () => {
   return (
-    <footer className="flex items-center justify-between px-6 w-full h-24 bg-accent dark:text-primary-foreground">
-      <div className="flex gap-4">
+    <footer className="flex py-4 flex-col lg:flex-row items-center justify-between px-6 w-full h-24 bg-accent dark:text-primary-foreground">
+      <div className="hidden lg:flex lg:gap-4">
         <a
           href="https://linkedin.com/in/matheus-zanutin"
           target="_blank"
@@ -40,6 +40,17 @@ export const Footer = () => {
           rel="noreferrer"
         >
           <FaDiscord className="size-6 hover:text-secondary transition-all" />
+        </a>
+        <a
+          href="https://linkedin.com/in/matheus-zanutin"
+          target="_blank"
+          rel="noreferrer"
+          className="flex lg:hidden"
+        >
+          <FaLinkedin className="size-6 hover:text-secondary transition-all" />
+        </a>
+        <a href="mailto:qzmatheus05@gmail.com" target="_blank" rel="noreferrer" className="flex lg:hidden">
+          <IoMdMail className="size-6 hover:text-secondary transition-all" />
         </a>
       </div>
     </footer>
