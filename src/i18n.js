@@ -64,6 +64,7 @@ i18n
             name: "Name",
             email: "Email",
             message: "Message",
+            messagePlaceholder: "Hello, I would like to know more about...",
             send: "Send",
             or: "OR",
             errors: {
@@ -133,6 +134,7 @@ i18n
             name: "Nome",
             email: "Email",
             message: "Mensagem",
+            messagePlaceholder: "Olá, gostaria de saber mais sobre...",
             send: "Enviar",
             or: "OU",
             errors: {

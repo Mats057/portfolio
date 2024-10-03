@@ -23,14 +23,14 @@ export const SettingsMenu = () => {
       const windowWidth = window.innerWidth;
       setButtonPosition({
         ...buttonPosition,
-        bottom: windowWidth > 768 ? (isContactRoute ? '8rem' : '4rem') : '2rem',
+        bottom: windowWidth > 768 ? (isContactRoute ? '8rem' : '4rem') : (isContactRoute ? '8rem' : '2rem'),
       });
     };
 
     window.addEventListener('resize', handleResize);
     handleResize();
     return () => window.removeEventListener('resize', handleResize);
-  }, [isContactRoute, buttonPosition]);
+  }, [isContactRoute]);
 
   const handleScroll = () => {
     const footer = document.querySelector('.footer');

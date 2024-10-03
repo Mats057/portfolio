@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 function Default() {
   return (
-    <div className="relative">
+    <div className="relative main">
       <Outlet />
       <SettingsMenu />
       <Footer />

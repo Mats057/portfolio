@@ -1,16 +1,22 @@
 import { useEffect, useState, useRef } from "react";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { useLocation } from "react-router-dom";
 
-export const Footer = ({ className }) => {
+export const Footer = ({ className='' }) => {
   const footerRef = useRef(null);
   const [isAbsolute, setIsAbsolute] = useState(false);
+  const location = useLocation();
+
   const checkFooterPosition = () => {
     if (footerRef.current) {
       const footerHeight = footerRef.current.offsetHeight;
       const windowHeight = window.innerHeight;
-
-      setIsAbsolute(footerHeight + document.body.offsetHeight < windowHeight);
+      const mainHeight = document.querySelector('.main').offsetHeight;
+      
+      // A lógica aqui foi ajustada para incluir a altura do footer
+      console.log(mainHeight + footerHeight, windowHeight);
+      setIsAbsolute(mainHeight + footerHeight <= windowHeight);
     }
   };
 
@@ -21,14 +27,14 @@ export const Footer = ({ className }) => {
     return () => {
       window.removeEventListener("resize", checkFooterPosition);
     };
-  }, []);
+  }, [location]);
 
   return (
     <footer
       ref={footerRef}
-      className={`footer flex py-4 flex-col lg:flex-row items-center justify-between px-6 w-full h-24 bg-accent dark:text-primary-foreground ${className} ${
-        isAbsolute ? 'absolute bottom-0 left-0 w-full' : ''
-      }`}
+      className={`footer flex py-4 flex-col lg:flex-row items-center justify-between px-6 w-full h-24 bg-accent dark:text-primary-foreground ${
+        isAbsolute ? 'fixed bottom-0 ' : ''
+      }${className}`}
     >
       <div className="hidden lg:flex lg:gap-4">
         <a
