@@ -1,9 +1,19 @@
-import { Trans, useTranslation } from "react-i18next";
-import { ProjectCard } from "@/components/project-card";
+import { ProjectsButton } from "@/components/projects-button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@radix-ui/react-aspect-ratio";
+import { useTranslation } from "react-i18next";
+import { Link, useParams } from "react-router-dom";
+import defaultImg from "/default.png";
 
-function Projetos() {
+function RouteParams() {
   const [t] = useTranslation();
-
+  const { id } = useParams();
   const projects = [
     {
       name: "HydroSense",
@@ -153,20 +163,69 @@ function Projetos() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center my-4">
-      <h1 className="text-4xl font-bold my-4">
-        <Trans i18nKey="favorite">
-          {" "}
-          <span className="text-secondary"> </span>{" "}
-        </Trans>
-      </h1>
-      <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-0 xl:gap-16 lg:px-48 xl:gap-y-6">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} index={index} project={project} />
-        ))}
+    <main>
+      <Link
+        to="/projects"
+        className="text-foreground dark:text-card-foreground bg-secondary dark:bg-secondary/65 px-6 font-medium py-1 rounded-md text-center w-full hover:bg-primary/80 dark:hover:bg-secondary/50 transition-all ml-8"
+      >
+        VOLTAR
+      </Link>
+      <div className="flex flex-col lg:flex-row items-center justify-center space-x-2 px-8 h-[calc(100svh-10rem)]">
+        <div className="w-full lg:mr-4">
+          {projects[id].img != "" ? (
+            <Carousel
+              opts={{
+                loop: true,
+              }}
+            >
+              <CarouselContent>
+                {projects[id].img.map((img, i) => (
+                  <CarouselItem key={i}>
+                    <AspectRatio
+                      ratio={16 / 9}
+                      className="flex items-center justify-center"
+                    >
+                      <img
+                        src={img}
+                        alt={projects[id].name}
+                        className="object-contain rounded-sm w-full max-h-full select-none"
+                      />
+                    </AspectRatio>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 bg-transparent text-input" />
+              <CarouselNext className="right-2 bg-transparent text-input" />
+            </Carousel>
+          ) : (
+            <div className="flex w-full h-full justify-center items-center">
+                <img src={defaultImg} alt={projects[id].name}/>
+            </div>
+          )}
+        </div>
+        <div className="flex flex-col lg:w-3/4">
+          <div className="font-bold text-primary mb-2">
+            <h2 className="text-2xl">{projects[id].name}</h2>
+            <h2>{projects[id].data}</h2>
+          </div>
+          <p className="text-ring">{projects[id].description}</p>
+          <p className="text-ring mt-4">
+            <span className="font-bold">{t("technologies")}</span>{" "}
+            {projects[id].tecnologias.map(
+              (element, i) =>
+                element + (i < projects[id].tecnologias.length - 1 ? ", " : ".")
+            )}
+          </p>
+          <div className="flex items-center justify-around mt-4 w-full gap-3">
+            <ProjectsButton link={projects[id].github} text="Github" />
+            {projects[id].link && (
+              <ProjectsButton link={projects[id].link} text="Demo" />
+            )}
+          </div>
+        </div>
       </div>
     </main>
   );
 }
 
-export default Projetos;
+export default RouteParams;

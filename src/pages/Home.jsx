@@ -4,6 +4,7 @@ import ImgTest from "../assets/img-test.svg";
 import { Link } from "react-router-dom";
 import { SocialMenu } from "@/components/social-menu";
 import { TypeAnimation } from "react-type-animation";
+import { SettingsMenu } from "@/components/settings-menu";
 
 function Home() {
   const [t] = useTranslation();
@@ -55,6 +56,7 @@ function Home() {
         </section>
       </main>
       <SocialMenu />
+      <SettingsMenu />
     </>
   );
 }

@@ -2,12 +2,12 @@ import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
-export const SocialMenu = () => {
+export const SocialMenu = ({animate=true}) => {
 
     const [t] = useTranslation();
 
     return (
-      <footer className="w-full mb-4 xl:mt-4 z-10 flex justify-center items-center select-none animate-floating">
+      <footer className={`w-full mb-4 xl:mt-4 z-10 flex justify-center items-center select-none ${animate && 'animate-floating'}`}>
         <h3 className="text-lg font-semibold text-primary">{t("contactCall")}</h3>
         <span className="bg-primary h-px w-[40px] mx-2 mt-0.5"></span>
         <div className="flex gap-4 text-primary">

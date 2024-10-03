@@ -58,6 +58,22 @@ i18n
             benchmark:
               "A project developed at ETEC, consisting of a free-theme program in C# created in Visual Studio to test my knowledge of listBox, checkBox, radioButton, and comboBox.",
           },
+          contactPage: {
+            title: "Liked what you saw?",
+            subtitle: "Get in touch with me",
+            name: "Name",
+            email: "Email",
+            message: "Message",
+            send: "Send",
+            or: "OR",
+            errors: {
+              nameMin: "Name must have at least 3 characters",
+              nameMax: "Name must have at most 50 characters",
+              email: "Enter a valid email",
+              msgMin: "Message must have at least 10 characters",
+              msgMax: "Message must have at most 500 characters",
+            },
+          },
         },
       },
       pt: {
@@ -110,6 +126,22 @@ i18n
               "Eu desenvolvi esse projeto para a disciplina de Computational Thinking with Python da FIAP. Ele consiste em um aplicativo híbrido (Mobile, Desktop, Web) que traz informações sobre a Formula E, como pilotos, equipes, calendário, etc. O aplicativo foi desenvolvido em Python, com ajuda da biblioteca Flet para gerar a build em Flutter.",
             benchmark:
               "Um projeto desenvolvido na ETEC, ele consiste em um programa de tema livre em C# feito no VS para testar meus conhecimentos em listBox, checkBox, radioButton e comboBox.",
+          },
+          contactPage: {
+            title: "Gostou do que viu?",
+            subtitle: "Entre em contato comigo",
+            name: "Nome",
+            email: "Email",
+            message: "Mensagem",
+            send: "Enviar",
+            or: "OU",
+            errors: {
+              nameMin: "O nome deve ter no mínimo 3 caracteres",
+              nameMax: "O nome deve ter no máximo 50 caracteres",
+              email: "Digite um email válido",
+              msgMin: "A mensagem deve ter no mínimo 10 caracteres",
+              msgMax: "A mensagem deve ter no máximo 500 caracteres",
+            },
           },
         },
       },

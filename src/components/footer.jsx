@@ -1,9 +1,35 @@
+import { useEffect, useState, useRef } from "react";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
-export const Footer = () => {
+export const Footer = ({ className }) => {
+  const footerRef = useRef(null);
+  const [isAbsolute, setIsAbsolute] = useState(false);
+  const checkFooterPosition = () => {
+    if (footerRef.current) {
+      const footerHeight = footerRef.current.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      setIsAbsolute(footerHeight + document.body.offsetHeight < windowHeight);
+    }
+  };
+
+  useEffect(() => {
+    checkFooterPosition();
+
+    window.addEventListener("resize", checkFooterPosition);
+    return () => {
+      window.removeEventListener("resize", checkFooterPosition);
+    };
+  }, []);
+
   return (
-    <footer className="flex py-4 flex-col lg:flex-row items-center justify-between px-6 w-full h-24 bg-accent dark:text-primary-foreground">
+    <footer
+      ref={footerRef}
+      className={`footer flex py-4 flex-col lg:flex-row items-center justify-between px-6 w-full h-24 bg-accent dark:text-primary-foreground ${className} ${
+        isAbsolute ? 'absolute bottom-0 left-0 w-full' : ''
+      }`}
+    >
       <div className="hidden lg:flex lg:gap-4">
         <a
           href="https://linkedin.com/in/matheus-zanutin"
