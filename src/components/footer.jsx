@@ -11,20 +11,27 @@ export const Footer = ({ className='' }) => {
   const checkFooterPosition = () => {
     if (footerRef.current) {
       const footerHeight = footerRef.current.offsetHeight;
-      const windowHeight = window.visualViewport.height;
+      const windowHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
       const mainHeight = document.querySelector('.main').offsetHeight;
-      
-      // A lógica aqui foi ajustada para incluir a altura do footer
-      setIsAbsolute(mainHeight + footerHeight <= windowHeight);
+
+      if (mainHeight + footerHeight <= windowHeight) {
+        setIsAbsolute(true);
+      } else {
+        setIsAbsolute(false);
+      }
     }
   };
 
   useEffect(() => {
     checkFooterPosition();
 
-    window.addEventListener("resize", checkFooterPosition);
+    const resizeListener = () => {
+      setTimeout(() => checkFooterPosition(), 200);
+    };
+
+    window.addEventListener("resize", resizeListener);
     return () => {
-      window.removeEventListener("resize", checkFooterPosition);
+      window.removeEventListener("resize", resizeListener);
     };
   }, [location]);
 
