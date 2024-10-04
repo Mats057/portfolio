@@ -11,11 +11,12 @@ export const Footer = ({ className='' }) => {
   const checkFooterPosition = () => {
     if (footerRef.current) {
       const footerHeight = footerRef.current.offsetHeight;
+      const headerHeight = document.querySelector('header').offsetHeight;
       const windowHeight = window.innerHeight;
       const mainHeight = document.querySelector('.main').offsetHeight;
-      const scrolledFromTop = window.scrollY || window.pageYOffset;
+      const scrolledFromTop = window.scrollY;
 
-      if (mainHeight + footerHeight <= windowHeight && scrolledFromTop === 0) {
+      if (mainHeight + footerHeight + headerHeight <= windowHeight && scrolledFromTop === 0) {
         setIsAbsolute(true);
       } else {
         setIsAbsolute(false);
