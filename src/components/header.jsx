@@ -43,7 +43,7 @@ export const Header = () => {
       {/* Menu dropdown */}
       {shouldRenderMenu && (
         <div
-          className={`fixed top-16 right-0 bg-background w-screen h-[calc(100svh-64px)] flex flex-col items-center text-center justify-center transition-all duration-500 ease-in-out z-50 ${isOpen ? "clip-open" : "clip-close"}`}
+          className={`fixed top-16 right-0 bg-background w-screen h-[calc(100vh-64px)] flex flex-col items-center text-center justify-center transition-all duration-500 ease-in-out z-50 ${isOpen ? "clip-open" : "clip-close"}`}
         >
           <nav className="flex text-2xl text-accent-foreground flex-col space-y-4 -mt-24 md:text-4xl">
             <NavLink to="/" className="hover:opacity-80" onClick={toggleMenu}>
