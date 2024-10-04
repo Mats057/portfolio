@@ -7,7 +7,7 @@ import Home from "./pages/Home.jsx";
 import Sobre from "./pages/Sobre.jsx";
 import Contato from "./pages/Contato.jsx";
 import Projetos from "./pages/Projetos.jsx";
-import RouteParams from "./pages/RouteParams.jsx";
+import Projeto from "./pages/Projeto.jsx";
 import Default from "./pages/Default.jsx";
 
 const router = createBrowserRouter([
@@ -37,15 +37,15 @@ const router = createBrowserRouter([
           },
           {
             path: "project/:id",
-            element: <RouteParams />,
+            element: <Projeto />,
           },
+          {
+            path: "*",
+            element: <h1>Página não encontrada</h1>,
+          }
         ],
       },
     ],
-  },
-  {
-    path: "*",
-    element: <h1>Página não encontrada</h1>,
   },
 ]);
 

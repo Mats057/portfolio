@@ -23,7 +23,7 @@ export const SettingsMenu = () => {
       const windowWidth = window.innerWidth;
       setButtonPosition({
         ...buttonPosition,
-        bottom: windowWidth > 768 ? (isContactRoute ? '8rem' : '4rem') : (isContactRoute ? '8rem' : '2rem'),
+        bottom: windowWidth > 768 ? (isContactRoute ? '8rem' : '4rem') : '2rem',
       });
     };
 
@@ -57,7 +57,7 @@ export const SettingsMenu = () => {
     <Popover className="dark:text-white">
       <PopoverTrigger asChild>
         <button 
-          className={`isolate ring-1 ring-black/5 bg-foreground/30 shadow-lg backdrop-filter backdrop-blur-md rounded-full p-3 right-8 md:right-16 animate-in slide-in-from-right-28 duration-300 ${buttonPosition.position}`} 
+          className={`isolate ring-1 ring-black/5 bg-foreground/30 z-20 shadow-lg backdrop-filter backdrop-blur-md rounded-full p-3 right-8 md:right-16 animate-in slide-in-from-right-28 duration-300 ${buttonPosition.position}`} 
           style={{ bottom: buttonPosition.bottom }}
         >
           <Settings className="text-primary w-8 h-8 dark:text-primary stroke-1" />
@@ -65,7 +65,7 @@ export const SettingsMenu = () => {
       </PopoverTrigger>
       <PopoverContent
         side="top"
-        className="border border-card mb-2 bg-foreground p-2 dark:text-card-foreground"
+        className="border border-card mb-2 bg-foreground p-2 dark:text-card-foreground z-20"
       >
         <LanguageSelector />
         <ModeToggle />

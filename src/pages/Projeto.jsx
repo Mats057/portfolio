@@ -10,6 +10,7 @@ import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import defaultImg from "/default.png";
+import { FaCalendar } from "react-icons/fa";
 
 function RouteParams() {
   const [t] = useTranslation();
@@ -163,15 +164,9 @@ function RouteParams() {
   ];
 
   return (
-    <main>
-      <Link
-        to="/projects"
-        className="text-foreground dark:text-card-foreground bg-secondary dark:bg-secondary/65 px-6 font-medium py-1 rounded-md text-center w-full hover:bg-primary/80 dark:hover:bg-secondary/50 transition-all ml-8"
-      >
-        VOLTAR
-      </Link>
-      <div className="flex flex-col lg:flex-row items-center justify-center space-x-2 px-8 h-[calc(100svh-10rem)]">
-        <div className="w-full lg:mr-4">
+    <main className="flex flex-1 flex-grow flex-col items-center justify-center pb-4 lg:pb-16 animate-in slide-in-from-right duration-300">
+      <div className="flex flex-col items-center justify-center px-8 lg:w-2/3">
+        <div className="w-full">
           {projects[id].img != "" ? (
             <Carousel
               opts={{
@@ -203,10 +198,10 @@ function RouteParams() {
             </div>
           )}
         </div>
-        <div className="flex flex-col lg:w-3/4">
+        <div className="flex flex-col lg:w-full">
           <div className="font-bold text-primary mb-2">
             <h2 className="text-2xl">{projects[id].name}</h2>
-            <h2>{projects[id].data}</h2>
+            <h2 className="flex items-center gap-1">{projects[id].data}<FaCalendar /></h2>
           </div>
           <p className="text-ring">{projects[id].description}</p>
           <p className="text-ring mt-4">
@@ -219,11 +214,12 @@ function RouteParams() {
           <div className="flex items-center justify-around mt-4 w-full gap-3">
             <ProjectsButton link={projects[id].github} text="Github" />
             {projects[id].link && (
-              <ProjectsButton link={projects[id].link} text="Demo" />
+              <ProjectsButton link={projects[id].link} text="Deploy" />
             )}
           </div>
         </div>
       </div>
+      <Link to="/projects" className="lg:absolute mt-8 left-6 top-0 text-primary text-lg bg-foreground rounded-lg py-1 px-4">VOLTAR</Link>
     </main>
   );
 }

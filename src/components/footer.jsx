@@ -1,55 +1,13 @@
-import { useEffect, useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { useLocation } from "react-router-dom";
 
-export const Footer = ({ className='' }) => {
-  const footerRef = useRef(null);
-  const [isAbsolute, setIsAbsolute] = useState(false);
-  const location = useLocation();
-
-  const checkFooterPosition = () => {
-    if (footerRef.current) {
-      const footerHeight = footerRef.current.offsetHeight;
-      const headerHeight = document.querySelector('header').offsetHeight;
-      const windowHeight = window.innerHeight;
-      const mainHeight = document.querySelector('.main').offsetHeight;
-      const scrolledFromTop = window.scrollY;
-
-      if (mainHeight + footerHeight + headerHeight <= windowHeight && scrolledFromTop === 0) {
-        setIsAbsolute(true);
-      } else {
-        setIsAbsolute(false);
-      }
-    }
-  };
-
-  useEffect(() => {
-    checkFooterPosition();
-
-    const resizeListener = () => {
-      setTimeout(() => checkFooterPosition(), 200);
-    };
-
-    const scrollListener = () => {
-      checkFooterPosition();
-    };
-
-    window.addEventListener("resize", resizeListener);
-    window.addEventListener("scroll", scrollListener);
-
-    return () => {
-      window.removeEventListener("resize", resizeListener);
-      window.removeEventListener("scroll", scrollListener);
-    };
-  }, [location]);
+export const Footer = ({ className = '' }) => {
+  const [t] = useTranslation();
 
   return (
     <footer
-      ref={footerRef}
-      className={`footer flex py-4 flex-col lg:flex-row items-center justify-between px-6 w-full h-24 bg-accent dark:text-primary-foreground ${
-        isAbsolute ? 'fixed bottom-0 ' : ''
-      }${className}`}
+      className={`footer flex py-4 flex-col lg:flex-row items-center justify-between px-6 w-full h-24 bg-accent dark:text-primary-foreground ${className}`}
     >
       <div className="hidden lg:flex lg:gap-4">
         <a
@@ -65,7 +23,7 @@ export const Footer = ({ className='' }) => {
       </div>
       <div>
         <p className="text-sm font-bold">
-          © 2024 - Desenvolvido por{" "}
+          © 2024 - {t('developedBy')}
           <a
             href="https://www.linkedin.com/in/matheus-zanutin/"
             target="_blank"

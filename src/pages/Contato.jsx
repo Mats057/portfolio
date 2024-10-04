@@ -63,7 +63,7 @@ function Contato() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center mt-4 lg:mt-16">
+    <main className="flex flex-1 flex-grow flex-col items-center justify-center">
       <h1 className="text-4xl font-bold animate-in slide-in-from-top-4 duration-500 text-center">{t("contactPage.title")}</h1>
       <p className="text-lg animate-in slide-in-from-top-8 duration-500">{t("contactPage.subtitle")}</p>
       <section className="flex flex-col items-center justify-center w-full px-4">

@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 function Default() {
   return (
-    <div className="relative main">
+    <div className="flex flex-col relative main min-h-[calc(100vh-4rem)]">
       <Outlet />
       <SettingsMenu />
       <Footer />

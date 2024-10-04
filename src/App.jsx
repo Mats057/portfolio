@@ -9,7 +9,7 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark">
-      <div className="bg-background dark:text-card-foreground min-h-svh">
+      <div className="bg-background dark:text-card-foreground min-h-screen">
         <Header />
         <Outlet />
         <Toaster />

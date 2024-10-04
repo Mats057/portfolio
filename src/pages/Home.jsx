@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center lg:mx-12 lg:min-h-[70vh] animate-in fade-in duration-1000">
+      <main className="flex flex-1 flex-grow flex-col items-center justify-center lg:mx-12 lg:min-h-[70vh] animate-in fade-in duration-1000 ">
         <section className="flex flex-col lg:flex-row w-full items-center justify-center px-4 mt-8 mb-8 md:mt-4 select-none">
           <div className="text-primary font-extrabold max-w-full">
             <h3 className="text-3xl md:text-5xl">{t("hi")}</h3>
@@ -54,8 +54,8 @@ function Home() {
             className="p-4 pb-0 mr-4 md:w-3/5 lg:w-1/2 xl:w-1/3 md:mt-12 md:ml-12"
           />
         </section>
-      </main>
       <SocialMenu />
+      </main>
       <SettingsMenu />
     </>
   );
