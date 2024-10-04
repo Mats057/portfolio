@@ -11,7 +11,7 @@ export const Footer = ({ className='' }) => {
   const checkFooterPosition = () => {
     if (footerRef.current) {
       const footerHeight = footerRef.current.offsetHeight;
-      const windowHeight = window.innerHeight;
+      const windowHeight = window.visualViewport.height;
       const mainHeight = document.querySelector('.main').offsetHeight;
       
       // A lógica aqui foi ajustada para incluir a altura do footer
