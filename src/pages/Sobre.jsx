@@ -48,7 +48,7 @@ function Sobre() {
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="flex flex-col items-start justify-center text-xl font-semibold gap-2 px-8">
-        <h1 className="text-4xl font-bold self-center p-4 animate-in slide-in-from-top-4 duration-500">
+        <h1 className="text-4xl font-bold self-center p-4 animate-in slide-in-from-top-12 duration-500 text-center">
           <Trans i18nKey="who">
             {" "}
             <span className="text-secondary">I?</span>
@@ -96,7 +96,7 @@ function Sobre() {
         </p>
       </section>
       <section className="mt-24 flex items-center flex-col">
-        <h1 className="text-4xl font-bold mb-8">
+        <h1 className="text-4xl font-bold mb-8 text-center">
           <Trans i18nKey="skills">
             {" "}
             <span className="text-secondary"> </span>

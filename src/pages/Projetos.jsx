@@ -154,7 +154,7 @@ function Projetos() {
 
   return (
     <main className="flex flex-col items-center justify-center my-4">
-      <h1 className="text-4xl font-bold my-4">
+      <h1 className="text-4xl font-bold text-center my-4 animate-in slide-in-from-top-8 duration-500">
         <Trans i18nKey="favorite">
           {" "}
           <span className="text-secondary"> </span>{" "}

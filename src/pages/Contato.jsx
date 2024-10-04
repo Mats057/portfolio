@@ -64,18 +64,18 @@ function Contato() {
 
   return (
     <main className="flex flex-col items-center justify-center mt-4 lg:mt-16">
-      <h1 className="text-4xl font-bold">{t("contactPage.title")}</h1>
-      <p className="text-lg">{t("contactPage.subtitle")}</p>
+      <h1 className="text-4xl font-bold animate-in slide-in-from-top-4 duration-500 text-center">{t("contactPage.title")}</h1>
+      <p className="text-lg animate-in slide-in-from-top-8 duration-500">{t("contactPage.subtitle")}</p>
       <section className="flex flex-col items-center justify-center w-full px-4">
         <form
           className="flex flex-col items-start w-full lg:w-auto justify-center mt-8"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <label htmlFor="nome">{t("contactPage.name")}</label>
+          <label htmlFor="nome" className="animate-in slide-in-from-left">{t("contactPage.name")}</label>
           <input
             type="text"
             placeholder="John Doe"
-            className={`w-full lg:w-96 p-2 my-2 border-2 dark:border-foreground bg-background focus:bg-foreground rounded-md ${
+            className={`w-full lg:w-96 p-2 my-2 border-2 dark:border-foreground bg-background focus:bg-foreground rounded-md animate-in slide-in-from-left duration-300 ${
               errors.nome
                 ? "border-red-500 dark:border-red-500"
                 : "border-primary"
@@ -87,11 +87,11 @@ function Contato() {
               {errors.nome.message}
             </span>
           )}
-          <label htmlFor="email">{t("contactPage.email")}</label>
+          <label htmlFor="email" className="animate-in slide-in-from-right">{t("contactPage.email")}</label>
           <input
             type="email"
             placeholder="johndoe@mail.com"
-            className={`w-full lg:w-96 p-2 my-2 border-2 dark:border-foreground bg-background focus:bg-foreground rounded-md ${
+            className={`w-full lg:w-96 p-2 my-2 border-2 dark:border-foreground bg-background focus:bg-foreground rounded-md animate-in slide-in-from-right duration-300 ${
               errors.email
                 ? "border-red-500 dark:border-red-500"
                 : "border-primary"
@@ -103,11 +103,11 @@ function Contato() {
               {errors.email.message}
             </span>
           )}
-          <label htmlFor="msg">{t("contactPage.message")}</label>
+          <label htmlFor="msg" className="animate-in slide-in-from-left">{t("contactPage.message")}</label>
           <textarea
             rows={4}
             placeholder={t("contactPage.messagePlaceholder")}
-            className={`w-full lg:w-96 p-2 my-2 border-2 dark:border-foreground bg-background focus:bg-foreground rounded-md ${
+            className={`w-full lg:w-96 p-2 my-2 border-2 dark:border-foreground bg-background focus:bg-foreground rounded-md animate-in slide-in-from-left duration-300 ${
               errors.msg
                 ? "border-red-500 dark:border-red-500"
                 : "border-primary"

@@ -11,9 +11,9 @@ function Home() {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center mx-8 lg:mx-12 lg:min-h-[70vh] animate-in fade-in duration-1000">
+      <main className="flex flex-col items-center justify-center lg:mx-12 lg:min-h-[70vh] animate-in fade-in duration-1000">
         <section className="flex flex-col lg:flex-row w-full items-center justify-center px-4 mt-8 mb-8 md:mt-4 select-none">
-          <div className="text-primary font-extrabold">
+          <div className="text-primary font-extrabold max-w-full">
             <h3 className="text-3xl md:text-5xl">{t("hi")}</h3>
             <h1 className="text-4xl md:text-6xl">
               <Trans i18nKey="main">
@@ -39,7 +39,7 @@ function Home() {
               speed={50}
               repeat={Infinity}
             />
-            <div className="flex gap-4 w-full mt-8">
+            <div className="flex gap-4 w-full mt-8 max-[360px]:flex-col">
               <Button className="p-6 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground text-accent-foreground hover:text-accent text-xl">
                 <Link to="/about">{t("about")}</Link>
               </Button>

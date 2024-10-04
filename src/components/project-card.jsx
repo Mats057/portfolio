@@ -10,10 +10,11 @@ import { Link } from "react-router-dom";
 export const ProjectCard = ({ index, project }) => {
   const [t] = useTranslation();
   const useRouteParams = false; // Altere para false para usar o Dialog ou true para usar o Link
+  
   return (
     <div
       key={index}
-      className="flex flex-col items-center justify-between my-8 border-none text-primary p-8 rounded-2xl bg-accent shadow-xl hover:scale-105 transition-transform"
+      className="flex flex-col items-center justify-between my-8 border-none text-primary p-8 rounded-2xl bg-accent shadow-xl hover:scale-105 transition-all animate-in slide-in-from-left-[50vw] duration-500"
     >
       <div className="w-full">
         <AspectRatio

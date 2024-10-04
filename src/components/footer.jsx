@@ -11,10 +11,11 @@ export const Footer = ({ className='' }) => {
   const checkFooterPosition = () => {
     if (footerRef.current) {
       const footerHeight = footerRef.current.offsetHeight;
-      const windowHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+      const windowHeight = window.innerHeight;
       const mainHeight = document.querySelector('.main').offsetHeight;
+      const scrolledFromTop = window.scrollY || window.pageYOffset;
 
-      if (mainHeight + footerHeight <= windowHeight) {
+      if (mainHeight + footerHeight <= windowHeight && scrolledFromTop === 0) {
         setIsAbsolute(true);
       } else {
         setIsAbsolute(false);
@@ -29,9 +30,16 @@ export const Footer = ({ className='' }) => {
       setTimeout(() => checkFooterPosition(), 200);
     };
 
+    const scrollListener = () => {
+      checkFooterPosition();
+    };
+
     window.addEventListener("resize", resizeListener);
+    window.addEventListener("scroll", scrollListener);
+
     return () => {
       window.removeEventListener("resize", resizeListener);
+      window.removeEventListener("scroll", scrollListener);
     };
   }, [location]);
 
