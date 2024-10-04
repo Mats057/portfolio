@@ -15,7 +15,6 @@ export const Footer = ({ className='' }) => {
       const mainHeight = document.querySelector('.main').offsetHeight;
       
       // A lógica aqui foi ajustada para incluir a altura do footer
-      console.log(mainHeight + footerHeight, windowHeight);
       setIsAbsolute(mainHeight + footerHeight <= windowHeight);
     }
   };
