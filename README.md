@@ -60,7 +60,7 @@ Esse projeto é o meu portfólio pessoal, onde mostro um pouco sobre mim, minhas
 - <b>EmailJS</b><br>
     Para o envio de emails.
 
-- <b>Outras bibliotecas</b><br>
+- <b>Outros pacotes</b><br>
     - tailwind-animatecss
     - radix-ui
     - lucide-react
