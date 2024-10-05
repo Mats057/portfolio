@@ -39,6 +39,7 @@ i18n
           details: "More details",
           technologies: "Technologies: ",
           developedBy: "Developed by ",
+          voltar : "Back",
           projectsDesc: {
             hydrosense:
               "HydroSense is a real-time water quality monitoring project. I was responsible for developing 100% of the Arduino prototype, 100% of the real-time monitoring app with Python, and assisting with the project's landing page. It was developed for my first Global Solution at FIAP.",
@@ -119,6 +120,7 @@ i18n
           details: "Mais detalhes",
           technologies: "Tecnologias: ",
           developedBy: "Desenvolvido por ",
+          voltar : "Voltar",
           projectsDesc: {
             hydrosense:
               "HydroSense é um projeto de monitoramento de qualidade de água em tempo real. Eu fui responsável por desenvolver 100% do protótipo Arduino, 100% do app de monitoramento em tempo real com Python e ajudar na landing page do projeto. Ele foi desenvolvido para a minha primeira Global Solution da FIAP.",

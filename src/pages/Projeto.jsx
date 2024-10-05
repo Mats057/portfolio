@@ -219,7 +219,7 @@ function RouteParams() {
           </div>
         </div>
       </div>
-      <Link to="/projects" className="lg:absolute mt-8 left-6 top-0 text-primary text-lg bg-foreground rounded-lg py-1 px-4">VOLTAR</Link>
+      <Link to="/projects" className="lg:absolute mt-8 left-6 top-0 text-primary text-lg bg-foreground rounded-lg py-1 px-4">{t('voltar')}</Link>
     </main>
   );
 }
