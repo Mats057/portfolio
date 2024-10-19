@@ -20,9 +20,9 @@ function Projetos() {
         "CSS",
       ],
       img: [
-        "./moovie.png",
-        "./moovie2.gif",
-        "./moovie3.gif",
+        "/moovie.png",
+        "/moovie2.gif",
+        "/moovie3.gif",
       ],
       data: "10/2024",
     },
