@@ -39,8 +39,10 @@ i18n
           details: "More details",
           technologies: "Technologies: ",
           developedBy: "Developed by ",
-          voltar : "Back",
+          voltar: "Back",
           projectsDesc: {
+            moovie:
+              "The idea for creating Moovie came from delivering a project for a Web Development class in the 2nd semester of Software Engineering at FIAP. It consists of a website where anyone can access various movie information available on TMDB, ranging from trailers to where they can be watched. The site also provides a favorites and watched list system for users, and based on that, generates personalized recommendations.",
             hydrosense:
               "HydroSense is a real-time water quality monitoring project. I was responsible for developing 100% of the Arduino prototype, 100% of the real-time monitoring app with Python, and assisting with the project's landing page. It was developed for my first Global Solution at FIAP.",
             elara:
@@ -57,6 +59,8 @@ i18n
               "I can say this is the most important project of my career so far. It is a web system developed to meet the needs of Makeasy English. The project includes a system for managing students, teachers, classes, finances, and more. In this project, we developed all the business rules for the client within the system, and for that, I used technologies like HTML, CSS, JavaScript, PHP, MySQL, and more. It was developed for my final course project at ETEC, and I was responsible for full-stack development, DevOps, documentation, etc.",
             hub_formula_e:
               "I developed this project for the Computational Thinking with Python course at FIAP. It is a hybrid app (Mobile, Desktop, Web) that provides information about Formula E, such as drivers, teams, calendar, etc. The app was developed in Python, using the Flet library to generate the Flutter build.",
+            todoList_angular:
+              "This project was my first application with Angular, developed after completing Loiane Groner's Angular course. It was of great importance to solidify the knowledge acquired in the course and learn more about TypeScript and SCSS.",
             benchmark:
               "A project developed at ETEC, consisting of a free-theme program in C# created in Visual Studio to test my knowledge of listBox, checkBox, radioButton, and comboBox.",
           },
@@ -120,8 +124,10 @@ i18n
           details: "Mais detalhes",
           technologies: "Tecnologias: ",
           developedBy: "Desenvolvido por ",
-          voltar : "Voltar",
+          voltar: "Voltar",
           projectsDesc: {
+            moovie:
+              "A ideia para a criação do Moovie surgiu da entrega para um trabalho na matéria de Web Development no 2º Semestre de Engenharia de Software na FIAP. Ele consiste em um site onde qualquer pessoa pode acessar informações variadas de filmes disponíveis no TMDB, essas informações vão desde trailers até onde eles podem ser assistidos. O site também disponibiliza um sistema de lista de favoritos e assistidos para os usuários, e com base nisso, gera recomendações personalizadas.",
             hydrosense:
               "HydroSense é um projeto de monitoramento de qualidade de água em tempo real. Eu fui responsável por desenvolver 100% do protótipo Arduino, 100% do app de monitoramento em tempo real com Python e ajudar na landing page do projeto. Ele foi desenvolvido para a minha primeira Global Solution da FIAP.",
             elara:
@@ -138,6 +144,8 @@ i18n
               "Posso dizer que é o projeto mais importante da minha carreira até agora. Ele é um sistema Web desenvolvido para sanar as necessidades da Makeasy English. No projeto foi desenvolvido um sistema de gerenciamento de alunos, professores, aulas, finanças, etc. Nesse projeto desenvolvemos todas as regras de negócio para o cliente dentro do sistema e para isso utilizei tecnologias como HTML, CSS, JavaScript, PHP, MySQL e mais. Ele foi desenvolvido para a meu projeto de TCC na ETEC, nele eu fui responsável pelo desenvolvimento Full-Stack, DevOps, Documentação etc.",
             hub_formula_e:
               "Eu desenvolvi esse projeto para a disciplina de Computational Thinking with Python da FIAP. Ele consiste em um aplicativo híbrido (Mobile, Desktop, Web) que traz informações sobre a Formula E, como pilotos, equipes, calendário, etc. O aplicativo foi desenvolvido em Python, com ajuda da biblioteca Flet para gerar a build em Flutter.",
+            todoList_angular:
+              "Esse projeto foi minha primeira aplicação com Angular, ele foi desenvolvido após completar o curso de Angular da Loiane Groner. Ele foi de grande importância para fixar os conhecimentos adquiridos no curso e aprender mais sobre TypeScript e SCSS.",
             benchmark:
               "Um projeto desenvolvido na ETEC, ele consiste em um programa de tema livre em C# feito no VS para testar meus conhecimentos em listBox, checkBox, radioButton e comboBox.",
           },

@@ -6,6 +6,27 @@ function Projetos() {
 
   const projects = [
     {
+      name: "Moovie",
+      description: t("projectsDesc.moovie"), // Acessando a descrição a partir do i18next
+      github: "https://github.com/Mats057/Moovie",
+      link: "https://qz-moovie.vercel.app/",
+      tecnologias: [
+        "Javascript",
+        "React",
+        "TailwindCSS",
+        "Axios",
+        "Git",
+        "HTML",
+        "CSS",
+      ],
+      img: [
+        "./moovie.png",
+        "./moovie2.gif",
+        "./moovie3.gif",
+      ],
+      data: "10/2024",
+    },
+    {
       name: "HydroSense",
       description: t("projectsDesc.hydrosense"), // Acessando a descrição a partir do i18next
       github: "https://github.com/Mats057/HydroSense",
@@ -21,7 +42,7 @@ function Projetos() {
       ],
       img: [
         "https://github.com/Mats057/HydroSense-graph/raw/main/hydroSense-graph.jpg",
-        "https://media.licdn.com/dms/image/v2/D4D2DAQEheicnBfTq0g/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1719359228583?e=1728493200&v=beta&t=pGXsW6gYdPhUMUfUG8J_KInG8GEdNR4xRbFp9pbvAJc",
+        "./hydro_landing.png",
         "https://github.com/Mats057/HydroSense/raw/main/projeto.jpg",
       ],
       data: "05/2024",
@@ -86,6 +107,15 @@ function Projetos() {
       tecnologias: ["Python", "Flet", "Git"],
       img: ["/hub_fe.png", "/hub_fe2.png"],
       data: "09/2024",
+    },
+    {
+      name: "TodoList - Angular",
+      description: t("projectsDesc.todoList_angular"),
+      github: "https://github.com/Mats057/todoList-Angular",
+      link: "https://mats057.github.io/todoList-Angular/",
+      tecnologias: ["Angular", "TypeScript", "SCSS", "Git"],
+      img: ["https://github.com/Mats057/todoList-Angular/raw/main/src/assets/todo-Test.gif"],
+      data: "12/2023",
     },
     {
       name: "Pass-in",
