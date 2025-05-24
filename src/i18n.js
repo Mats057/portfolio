@@ -16,7 +16,7 @@ i18n
           cargo3: "A Backend Developer.",
           cargo4: "A Technology Enthusiast.",
           about: "About me",
-          skills: "My <1>Skills</1>",
+          skills: "My <1>Hard Skills</1>",
           projects: "My Projects",
           home: "Home",
           contact: "Contact",
@@ -30,7 +30,7 @@ i18n
           technical:
             "I have a technical degree in <1>Systems Development</1> from <2>ETEC</2>.",
           opportunity:
-            "I'm looking for my <1>first opportunity</1> in the developer market.",
+            "I'm an Intern on <1>Software Engineering</1> at <2>Motorola Solutions.</2>",
           prog_languages: "Programming Languages",
           front_tools: "Frontend Tools",
           back_tools: "Backend Tools",
@@ -101,7 +101,7 @@ i18n
           cargo3: "Um Desenvolvedor Backend.",
           cargo4: "Um Entusiasta de Tecnologia.",
           about: "Sobre mim",
-          skills: "Minhas <1>Habilidades</1>",
+          skills: "Minhas <1>Hard Skills</1>",
           projects: "Meus Projetos",
           home: "Página Inicial",
           contact: "Entrar em contato",
@@ -115,7 +115,7 @@ i18n
           technical:
             "Sou formado no técnico em <1>Desenvolvimento de Sistemas</1> pela <2>ETEC</2>.",
           opportunity:
-            "Estou em busca da minha <1>primeira oportunidade</1> no mercado de desenvolvedores.",
+            "Sou estagiário de <1>Engenharia de Software</1> na <2>Motorola Solutions.</2>",
           prog_languages: "Linguagens de Programação",
           front_tools: "Ferramentas Frontend",
           back_tools: "Ferramentas Backend",

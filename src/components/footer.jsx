@@ -4,6 +4,7 @@ import { IoMdMail } from "react-icons/io";
 
 export const Footer = ({ className = '' }) => {
   const [t] = useTranslation();
+  const year = new Date().getFullYear();
 
   return (
     <footer
@@ -23,7 +24,7 @@ export const Footer = ({ className = '' }) => {
       </div>
       <div>
         <p className="text-sm font-bold">
-          © 2024 - {t('developedBy')}
+          © 2024-{year} - {t('developedBy')}
           <a
             href="https://www.linkedin.com/in/matheus-zanutin/"
             target="_blank"

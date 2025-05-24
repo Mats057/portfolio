@@ -9,11 +9,12 @@ export const SkillsSection = ({children,title, className }) => {
     const isVisible = useIsVisible(section)
 
     return (
-           <div ref={section} className={`flex flex-col items-center lg:flex-row lg:items-start self-start w-full justify-left animate-in slide-in-from-right ${isVisible ? "opacity-100" : "opacity-0"} ${className}`}>
-            <h1 className="text-xl font-bold mt-8">{t(title)} <span className="hidden lg:inline-block">-</span></h1>
-            <ul className="grid grid-flow-row grid-cols-3 mt-4 lg:mt-0 lg:grid-cols-6">
+           <div ref={section} className={`flex flex-col items-center self-start justify-start animate-in slide-in-from-right ${isVisible ? "opacity-100" : "opacity-0"} ${className}`}>
+            <h1 className="lg:text-2xl text-xl font-bold mt-8 mb-4 self-start">{t(title)}</h1>
+            <ul className="grid grid-flow-row grid-cols-3 mt-4 lg:mt-0 xl:grid-flow-col-dense">
                 {children}
             </ul>
+            <div className="w-full h-px my-4 bg-white"></div>
            </div> 
     )
 };

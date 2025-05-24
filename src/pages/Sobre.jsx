@@ -9,36 +9,35 @@ import {
   FaGithub,
   FaHtml5,
   FaJava,
-  FaLinux,
   FaNodeJs,
   FaPython,
   FaReact,
   FaSass,
-  FaTrello,
 } from "react-icons/fa";
 import {
-  SiAndroidstudio,
   SiArduino,
+  SiFastapi,
+  SiGnubash,
+  SiGrafana,
   SiJavascript,
-  SiLaragon,
+  SiK6,
   SiMysql,
   SiPhp,
-  SiPhpmyadmin,
+  SiPostgresql,
   SiPostman,
   SiSpringboot,
+  SiSwagger,
+  SiTeamcity,
   SiTypescript,
-  SiVisualstudio,
-  SiVisualstudiocode,
-  SiWindows,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFigma } from "react-icons/io5";
 import { SkillsSection } from "@/components/skills-section";
-import { DiComposer } from "react-icons/di";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useIsVisible } from "@/hooks/useIsVisible";
 import { useRef } from "react";
+import { Kanban } from "lucide-react";
 
 function Sobre() {
   const [t] = useTranslation();
@@ -71,12 +70,18 @@ function Sobre() {
             <span className="text-secondary"> </span>
           </Trans>
         </p>
-        <p className="animate-in slide-in-from-left duration-300">
+        <p className="animate-in slide-in-from-left duration-700">
           *{" "}
-          <Trans i18nKey="cursing">
+          <Trans i18nKey="opportunity">
             {" "}
             <span className="text-secondary"> </span>
-            <a className="text-primary"> </a>{" "}
+            <a
+              className="text-primary"
+              target="_BLANK"
+              href="https://www.linkedin.com/company/motorolasolutions"
+            >
+              {" "}
+            </a>{" "}
           </Trans>
         </p>
         <p className="animate-in slide-in-from-left duration-500">
@@ -84,19 +89,32 @@ function Sobre() {
           <Trans i18nKey="technical">
             {" "}
             <span className="text-secondary"> </span>
-            <a className="text-primary"> </a>{" "}
+            <a
+              className="text-primary"
+              target="_BLANK"
+              href="https://www.linkedin.com/school/etecsp"
+            >
+              {" "}
+            </a>{" "}
           </Trans>
         </p>
-        <p className="animate-in slide-in-from-left duration-700">
+        <p className="animate-in slide-in-from-left duration-300">
           *{" "}
-          <Trans i18nKey="opportunity">
+          <Trans i18nKey="cursing">
             {" "}
             <span className="text-secondary"> </span>
+            <a
+              className="text-primary"
+              target="_BLANK"
+              href="https://www.linkedin.com/school/fiap"
+            >
+              {" "}
+            </a>{" "}
           </Trans>
         </p>
       </section>
       <section className="mt-24 flex items-center flex-col">
-        <h1 className="text-4xl font-bold mb-8 text-center">
+        <h1 className="text-4xl font-bold lg:mb-4 mb-8 text-center">
           <Trans i18nKey="skills">
             {" "}
             <span className="text-secondary"> </span>
@@ -110,96 +128,85 @@ function Sobre() {
             hoverColor="#f7dc43"
           />
           <SkillsItem icon={<SiTypescript />} title="TypeScript" />
-          <SkillsItem icon={<FaPython />} title="Python" />
           <SkillsItem icon={<FaJava />} title="Java" />
+          <SkillsItem icon={<FaPython />} title="Python" />
           <SkillsItem icon={<SiPhp />} title="PHP" />
         </SkillsSection>
 
-        <div className="w-full h-px my-4 bg-white"></div>
+
 
         <SkillsSection title="front_tools" className={"duration-300"}>
-          <SkillsItem icon={<FaHtml5 />} title="HTML" hoverColor="#f5803b" />
-          <SkillsItem icon={<FaCss3Alt />} title="CSS" />
-          <SkillsItem
-            icon={<SiJavascript />}
-            title="Javascript"
-            hoverColor="#f7dc43"
-          />
-          <SkillsItem icon={<SiTypescript />} title="TypeScript" />
-          <SkillsItem icon={<FaSass />} title="SCSS" hoverColor="#cf6c9d" />
-          <SkillsItem icon={<FaReact />} title="React" />
           <SkillsItem
             icon={<FaAngular />}
             title="Angular"
             hoverColor="#dd0836"
           />
+          <SkillsItem icon={<FaReact />} title="React" />
+          <SkillsItem icon={<FaHtml5 />} title="HTML" hoverColor="#f5803b" />
+          <SkillsItem icon={<FaCss3Alt />} title="CSS" />
+          <SkillsItem icon={<FaSass />} title="SCSS" hoverColor="#cf6c9d" />
           <SkillsItem icon={<RiTailwindCssFill />} title="Tailwind" />
           <SkillsItem
             icon={<FaBootstrap />}
             title="Bootstrap"
             hoverColor="#7c57b6"
           />
-          <SkillsItem icon={<SiPhp />} title="PHP" />
         </SkillsSection>
 
-        <div className="w-full h-px my-4 bg-white"></div>
 
         <SkillsSection title="back_tools" className={"duration-500"}>
-          <SkillsItem icon={<FaJava />} title="Java" />
           <SkillsItem
             icon={<SiSpringboot />}
             title="Spring Boot"
             hoverColor="#6bac36"
           />
-          <SkillsItem icon={<SiPhp />} title="PHP" />
-          <SkillsItem icon={<SiPhpmyadmin />} title="PHPMyAdmin" />
           <SkillsItem
-            icon={<DiComposer />}
-            title="Composer"
-            hoverColor="#61523f"
+            icon={<SiFastapi />}
+            title="FastAPI"
+            hoverColor="#009484"
           />
-          <SkillsItem icon={<SiMysql />} title="MySQL" />
+          <SkillsItem icon={<FaNodeJs />} title="NodeJS" hoverColor="#84c045" />
+          <SkillsItem icon={<SiPhp />} title="PHP" />
+          <SkillsItem
+            icon={<SiPostman />}
+            title="Postman"
+            hoverColor="#ff713f"
+          />
+          <SkillsItem
+            icon={<SiSwagger />}
+            title="Swagger"
+            hoverColor="#82eb38"
+          />
+          <SkillsItem icon={<SiMysql />} title="MySQL" hoverColor="#12728a" />
+          <SkillsItem
+            icon={<SiPostgresql />}
+            title="PostgreSQL"
+            hoverColor="#386c94"
+          />
         </SkillsSection>
 
-        <div className="w-full h-px my-4 bg-white"></div>
-
         <SkillsSection title="gen_tools" className={"duration-700"}>
+          <SkillsItem icon={<Kanban />} title="Kanban" />
           <SkillsItem icon={<FaGitAlt />} title="Git" hoverColor="#f05539" />
+          <SkillsItem icon={<SiGnubash />} title="Bash" hoverColor="#feb509" />
+          <SkillsItem icon={<FaDocker />} title="Docker" />
+          <SkillsItem icon={<SiTeamcity />} title="TeamCity" />
           <SkillsItem icon={<FaGithub />} title="Github" />
-          <SkillsItem
-            icon={<SiArduino />}
-            title="Arduino"
-            hoverColor="#0e9399"
-          />
           <SkillsItem
             icon={<IoLogoFigma />}
             title="Figma"
             hoverColor="#ff7563"
           />
-          <SkillsItem icon={<FaDocker />} title="Docker" />
-          <SkillsItem icon={<FaNodeJs />} title="NodeJS" hoverColor="#84c045" />
-          <SkillsItem icon={<FaLinux />} title="Linux" hoverColor="#feb509" />
-          <SkillsItem icon={<SiWindows />} title="Windows" />
           <SkillsItem
-            icon={<SiVisualstudio />}
-            title="Visual Studio"
-            hoverColor="#aa7de0"
+            icon={<SiGrafana />}
+            title="Grafana"
+            hoverColor="#fb6e2c"
           />
+          <SkillsItem icon={<SiK6 />} title="K6" hoverColor="#7c63fd" />
           <SkillsItem
-            icon={<SiVisualstudiocode />}
-            title="Visual Studio Code"
-          />
-          <SkillsItem
-            icon={<SiAndroidstudio />}
-            title="Android Studio"
-            hoverColor="#93c759"
-          />
-          <SkillsItem icon={<SiLaragon />} title="Laragon" />
-          <SkillsItem icon={<FaTrello />} title="Trello" />
-          <SkillsItem
-            icon={<SiPostman />}
-            title="Postman"
-            hoverColor="#ff713f"
+            icon={<SiArduino />}
+            title="Arduino"
+            hoverColor="#0e9399"
           />
         </SkillsSection>
       </section>
