@@ -10,7 +10,7 @@ i18n
       en: {
         translation: {
           hi: "Hi,",
-          main: "I'm <1>Matheus Queiroz.</1>",
+          main: "I'm <1>Matheus Zanutin.</1>",
           cargo: "A Software Engineer.",
           cargo2: "A Frontend Developer.",
           cargo3: "A Backend Developer.",
@@ -95,7 +95,7 @@ i18n
       pt: {
         translation: {
           hi: "Oi,",
-          main: "Sou o <1>Matheus Queiroz.</1>",
+          main: "Sou o <1>Matheus Zanutin.</1>",
           cargo: "Um Engenheiro de Software.",
           cargo2: "Um Desenvolvedor Frontend.",
           cargo3: "Um Desenvolvedor Backend.",

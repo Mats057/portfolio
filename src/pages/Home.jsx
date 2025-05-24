@@ -1,5 +1,4 @@
 import { Trans, useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
 import ImgTest from "../assets/img-test.svg";
 import { Link } from "react-router-dom";
 import { SocialMenu } from "@/components/social-menu";
@@ -19,7 +18,7 @@ function Home() {
               <Trans i18nKey="main">
                 I&apos;m
                 <span className="text-secondary select-text selection:bg-background selection:text-primary">
-                  Matheus Queiroz.
+                  Matheus Zanutin.
                 </span>
               </Trans>
             </h1>
@@ -40,12 +39,18 @@ function Home() {
               repeat={Infinity}
             />
             <div className="flex gap-4 w-full mt-8 max-[360px]:flex-col">
-              <Button className="p-6 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground text-accent-foreground hover:text-accent text-xl">
-                <Link to="/about">{t("about")}</Link>
-              </Button>
-              <Button className="p-6  rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground hover:text-accent text-accent-foreground text-xl">
-                <Link to="/projects">{t("projects")}</Link>
-              </Button>
+              <Link
+                className="px-6 py-3 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground text-accent-foreground hover:text-accent text-xl duration-300"
+                to="/about"
+              >
+                {t("about")}
+              </Link>
+              <Link
+                className="px-6 py-3 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground hover:text-accent text-accent-foreground text-xl duration-300"
+                to="/projects"
+              >
+                {t("projects")}
+              </Link>
             </div>
           </div>
           <img
@@ -54,7 +59,7 @@ function Home() {
             className="p-4 pb-0 mr-4 md:w-3/5 lg:w-1/2 xl:w-1/3 md:mt-12 md:ml-12"
           />
         </section>
-      <SocialMenu />
+        <SocialMenu />
       </main>
       <SettingsMenu />
     </>
