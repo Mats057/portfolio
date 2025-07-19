@@ -19,6 +19,10 @@ const router = createBrowserRouter([
         element: <AllInOne />,
       },
       {
+        path: "project/:id",
+        element: <Projeto />,
+      },
+      {
         path: "/*",
         element: <Default />,
         children: [
@@ -29,10 +33,6 @@ const router = createBrowserRouter([
           {
             path: "projects",
             element: <Projetos />,
-          },
-          {
-            path: "project/:id",
-            element: <Projeto />,
           },
           {
             path: "*",
