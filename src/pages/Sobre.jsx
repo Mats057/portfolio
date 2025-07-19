@@ -150,7 +150,7 @@ function Sobre() {
           />
         </SkillsSection>
 
-        <div className="flex gap-4">
+        <div className="lg:flex lg:gap-4">
           <SkillsSection title="front_tools" className={"duration-300"}>
             <SkillsItem
               icon={<FaAngular />}
