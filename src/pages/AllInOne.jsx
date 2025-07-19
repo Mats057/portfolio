@@ -10,7 +10,7 @@ import Contato from "./Contato";
 import { Toaster } from "sonner";
 import { Footer } from "@/components/footer";
 import { SettingsMenu } from "@/components/settings-menu";
-import { Slider } from "@/components/Slider";
+import { Slider } from "@/components/slider";
 
 function AllInOne() {
   const [t] = useTranslation();
