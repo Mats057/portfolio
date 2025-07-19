@@ -14,7 +14,7 @@ export const SkillsSection = ({children,title, className }) => {
             <ul className="grid grid-flow-row grid-cols-3 mt-4 lg:mt-0 xl:grid-flow-col-dense">
                 {children}
             </ul>
-            <div className="w-full h-px my-4 bg-white"></div>
+            <div className="w-full h-px my-4 bg-black dark:bg-white"></div>
            </div> 
     )
 };

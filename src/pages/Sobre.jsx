@@ -2,11 +2,9 @@ import { SkillsItem } from "@/components/skills-item";
 import { Trans, useTranslation } from "react-i18next";
 import {
   FaAngular,
-  FaBootstrap,
   FaCss3Alt,
   FaDocker,
   FaGitAlt,
-  FaGithub,
   FaHtml5,
   FaJava,
   FaNodeJs,
@@ -24,28 +22,23 @@ import {
   SiMysql,
   SiPhp,
   SiPostgresql,
-  SiPostman,
   SiSpringboot,
   SiSwagger,
   SiTeamcity,
   SiTypescript,
 } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFigma } from "react-icons/io5";
 import { SkillsSection } from "@/components/skills-section";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { useIsVisible } from "@/hooks/useIsVisible";
-import { useRef } from "react";
 import { Kanban } from "lucide-react";
 
 function Sobre() {
   const [t] = useTranslation();
-  const projectBtn = useRef();
-  const isVisible = useIsVisible(projectBtn);
 
   return (
-    <main className="flex flex-col items-center justify-center">
+    <section
+      className="flex flex-col items-center justify-center mb-12"
+      id="about"
+    >
       <section className="flex flex-col items-start justify-center text-xl font-semibold gap-2 px-8">
         <h1 className="text-4xl font-bold self-center p-4 animate-in slide-in-from-top-12 duration-500 text-center">
           <Trans i18nKey="who">
@@ -133,65 +126,12 @@ function Sobre() {
           <SkillsItem icon={<SiPhp />} title="PHP" />
         </SkillsSection>
 
-
-
-        <SkillsSection title="front_tools" className={"duration-300"}>
-          <SkillsItem
-            icon={<FaAngular />}
-            title="Angular"
-            hoverColor="#dd0836"
-          />
-          <SkillsItem icon={<FaReact />} title="React" />
-          <SkillsItem icon={<FaHtml5 />} title="HTML" hoverColor="#f5803b" />
-          <SkillsItem icon={<FaCss3Alt />} title="CSS" />
-          <SkillsItem icon={<FaSass />} title="SCSS" hoverColor="#cf6c9d" />
-          <SkillsItem icon={<RiTailwindCssFill />} title="Tailwind" />
-          <SkillsItem
-            icon={<FaBootstrap />}
-            title="Bootstrap"
-            hoverColor="#7c57b6"
-          />
-        </SkillsSection>
-
-
-        <SkillsSection title="back_tools" className={"duration-500"}>
-          <SkillsItem
-            icon={<SiSpringboot />}
-            title="Spring Boot"
-            hoverColor="#6bac36"
-          />
-          <SkillsItem
-            icon={<SiFastapi />}
-            title="FastAPI"
-            hoverColor="#009484"
-          />
-          <SkillsItem icon={<FaNodeJs />} title="NodeJS" hoverColor="#84c045" />
-          <SkillsItem icon={<SiPhp />} title="PHP" />
-          <SkillsItem
-            icon={<SiPostman />}
-            title="Postman"
-            hoverColor="#ff713f"
-          />
-          <SkillsItem
-            icon={<SiSwagger />}
-            title="Swagger"
-            hoverColor="#82eb38"
-          />
-          <SkillsItem icon={<SiMysql />} title="MySQL" hoverColor="#12728a" />
-          <SkillsItem
-            icon={<SiPostgresql />}
-            title="PostgreSQL"
-            hoverColor="#386c94"
-          />
-        </SkillsSection>
-
-        <SkillsSection title="gen_tools" className={"duration-700"}>
+                <SkillsSection title="gen_tools" className={"duration-700"}>
           <SkillsItem icon={<Kanban />} title="Kanban" />
           <SkillsItem icon={<FaGitAlt />} title="Git" hoverColor="#f05539" />
           <SkillsItem icon={<SiGnubash />} title="Bash" hoverColor="#feb509" />
           <SkillsItem icon={<FaDocker />} title="Docker" />
           <SkillsItem icon={<SiTeamcity />} title="TeamCity" />
-          <SkillsItem icon={<FaGithub />} title="Github" />
           <SkillsItem
             icon={<IoLogoFigma />}
             title="Figma"
@@ -209,20 +149,64 @@ function Sobre() {
             hoverColor="#0e9399"
           />
         </SkillsSection>
+
+        <div className="flex gap-4">
+          <SkillsSection title="front_tools" className={"duration-300"}>
+            <SkillsItem
+              icon={<FaAngular />}
+              title="Angular"
+              hoverColor="#dd0836"
+            />
+            <SkillsItem icon={<FaReact />} title="React" />
+            <SkillsItem icon={<FaHtml5 />} title="HTML" hoverColor="#f5803b" />
+            <SkillsItem icon={<FaCss3Alt />} title="CSS" />
+            <SkillsItem icon={<FaSass />} title="SCSS" hoverColor="#cf6c9d" />
+            {/* <SkillsItem icon={<RiTailwindCssFill />} title="Tailwind" /> */}
+            {/* <SkillsItem
+            icon={<FaBootstrap />}
+            title="Bootstrap"
+            hoverColor="#7c57b6"
+          /> */}
+          </SkillsSection>
+
+          <SkillsSection title="back_tools" className={"duration-500"}>
+            <SkillsItem
+              icon={<SiSpringboot />}
+              title="Spring Boot"
+              hoverColor="#6bac36"
+            />
+            <SkillsItem
+              icon={<SiFastapi />}
+              title="FastAPI"
+              hoverColor="#009484"
+            />
+            <SkillsItem
+              icon={<FaNodeJs />}
+              title="NodeJS"
+              hoverColor="#84c045"
+            />
+            {/* <SkillsItem icon={<SiPhp />} title="PHP" /> */}
+            {/* <SkillsItem
+            icon={<SiPostman />}
+            title="Postman"
+            hoverColor="#ff713f"
+          /> */}
+            <SkillsItem
+              icon={<SiSwagger />}
+              title="Swagger"
+              hoverColor="#82eb38"
+            />
+            <SkillsItem icon={<SiMysql />} title="MySQL" hoverColor="#12728a" />
+            <SkillsItem
+              icon={<SiPostgresql />}
+              title="PostgreSQL"
+              hoverColor="#386c94"
+            />
+          </SkillsSection>
+        </div>
+
       </section>
-      <section
-        ref={projectBtn}
-        className={`flex flex-col items-center mt-8 mb-16 transition-all ease-in duration-700 ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <Link to={"/projects"}>
-          <Button className="text-2xl px-8 py-8 rounded-2xl">
-            {t("projects")}
-          </Button>
-        </Link>
-      </section>
-    </main>
+    </section>
   );
 }
 

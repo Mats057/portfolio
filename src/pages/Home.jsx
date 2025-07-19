@@ -1,17 +1,15 @@
 import { Trans, useTranslation } from "react-i18next";
 import ImgTest from "../assets/img-test.svg";
-import { Link } from "react-router-dom";
 import { SocialMenu } from "@/components/social-menu";
 import { TypeAnimation } from "react-type-animation";
-import { SettingsMenu } from "@/components/settings-menu";
 
 function Home() {
   const [t] = useTranslation();
 
   return (
     <>
-      <main className="flex flex-1 flex-grow flex-col items-center justify-center lg:mx-12 lg:min-h-[70vh] animate-in fade-in duration-1000 ">
-        <section className="flex flex-col lg:flex-row w-full items-center justify-center px-4 mt-8 mb-8 md:mt-4 select-none">
+      <section className="flex flex-1 flex-grow flex-col items-center min-h-screen justify-center lg:mx-12 animate-in fade-in duration-1000" id="home">
+        <section className="flex flex-col lg:flex-row w-full items-center justify-center px-4 mb-8 md:mt-4 select-none">
           <div className="text-primary font-extrabold max-w-full">
             <h3 className="text-3xl md:text-5xl">{t("hi")}</h3>
             <h1 className="text-4xl md:text-6xl">
@@ -38,19 +36,29 @@ function Home() {
               speed={50}
               repeat={Infinity}
             />
-            <div className="flex gap-4 w-full mt-8 max-[360px]:flex-col">
-              <Link
+            <div className="flex flex-wrap gap-4 w-full mt-8 max-[360px]:flex-col">
+              <a
                 className="px-6 py-3 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground text-accent-foreground hover:text-accent text-xl duration-300"
-                to="/about"
+                href="#about"
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById("about");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 {t("about")}
-              </Link>
-              <Link
+              </a>
+              <a
                 className="px-6 py-3 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground hover:text-accent text-accent-foreground text-xl duration-300"
-                to="/projects"
+                href="#projects"
+                onClick={e => {
+                  e.preventDefault();
+                  const el = document.getElementById("projects");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 {t("projects")}
-              </Link>
+              </a>
             </div>
           </div>
           <img
@@ -60,8 +68,7 @@ function Home() {
           />
         </section>
         <SocialMenu />
-      </main>
-      <SettingsMenu />
+      </section>
     </>
   );
 }

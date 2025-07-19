@@ -194,7 +194,7 @@ function RouteParams() {
   ];
 
   return (
-    <main className="flex flex-1 flex-grow flex-col items-center justify-center pb-4 lg:pb-16 animate-in slide-in-from-right duration-300">
+    <section className="flex flex-1 flex-grow flex-col items-center justify-center pb-4 lg:pb-16 animate-in slide-in-from-right duration-300">
       <div className="flex flex-col items-center justify-center px-8 lg:w-2/3">
         <div className="w-full">
           {projects[id].img != "" ? (
@@ -250,7 +250,7 @@ function RouteParams() {
         </div>
       </div>
       <Link to="/projects" className="lg:absolute mt-8 left-6 top-0 text-primary text-lg bg-foreground rounded-lg py-1 px-4">{t('voltar')}</Link>
-    </main>
+    </section>
   );
 }
 

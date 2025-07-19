@@ -1,7 +1,7 @@
 import { Trans, useTranslation } from "react-i18next";
 import { ProjectCard } from "@/components/project-card";
 
-function Projetos() {
+function Projetos({ projectsQuantity }) {
   const [t] = useTranslation();
 
   const projects = [
@@ -19,11 +19,7 @@ function Projetos() {
         "HTML",
         "CSS",
       ],
-      img: [
-        "/moovie.png",
-        "/moovie2.gif",
-        "/moovie3.gif",
-      ],
+      img: ["/moovie.png", "/moovie2.gif", "/moovie3.gif"],
       data: "10/2024",
     },
     {
@@ -46,32 +42,6 @@ function Projetos() {
         "https://github.com/Mats057/HydroSense/raw/main/projeto.jpg",
       ],
       data: "05/2024",
-    },
-    {
-      name: "ELARA",
-      description: t("projectsDesc.elara"),
-      github: "https://github.com/Mats057/ELARA",
-      link: "https://elara.infinityfreeapp.com/home",
-      tecnologias: [
-        "Angular",
-        "SCSS",
-        "TypeScript",
-        "PHP",
-        "JWT",
-        "MySQL",
-        "Git",
-        "HTML",
-        "Postman",
-        "PHPMyAdmin",
-        "Composer",
-        "APIs",
-      ],
-      img: [
-        "/elara.jpeg",
-        "/login_elara.png",
-        "/config_elara.png",
-      ],
-      data: "12/2023",
     },
     {
       name: "Makeasy English",
@@ -100,6 +70,28 @@ function Projetos() {
       data: "12/2023",
     },
     {
+      name: "ELARA",
+      description: t("projectsDesc.elara"),
+      github: "https://github.com/Mats057/ELARA",
+      link: "https://elara.infinityfreeapp.com/home",
+      tecnologias: [
+        "Angular",
+        "SCSS",
+        "TypeScript",
+        "PHP",
+        "JWT",
+        "MySQL",
+        "Git",
+        "HTML",
+        "Postman",
+        "PHPMyAdmin",
+        "Composer",
+        "APIs",
+      ],
+      img: ["/elara.jpeg", "/login_elara.png", "/config_elara.png"],
+      data: "12/2023",
+    },
+    {
       name: "Hub - Formula E",
       description: t("projectsDesc.hub_formula_e"),
       github: "https://github.com/Challenge-Formula-E/Challenge-Python",
@@ -114,7 +106,9 @@ function Projetos() {
       github: "https://github.com/Mats057/todoList-Angular",
       link: "https://mats057.github.io/todoList-Angular/",
       tecnologias: ["Angular", "TypeScript", "SCSS", "Git"],
-      img: ["https://github.com/Mats057/todoList-Angular/raw/main/src/assets/todo-Test.gif"],
+      img: [
+        "https://github.com/Mats057/todoList-Angular/raw/main/src/assets/todo-Test.gif",
+      ],
       data: "12/2023",
     },
     {
@@ -162,7 +156,7 @@ function Projetos() {
       link: "",
       tecnologias: ["HTML", "CSS", "PHP", "MySQL", "Git"],
       img: [
-        "/quiz_sobre.png",  
+        "/quiz_sobre.png",
         "/quiz_quiz.png",
         "/quiz_account.png",
         "/quiz_users.png",
@@ -175,27 +169,32 @@ function Projetos() {
       github: "https://github.com/Mats057/Benchmark",
       link: "",
       tecnologias: ["C#", "VS"],
-      img: [
-        "/benchmark.png",
-      ],
+      img: ["/benchmark.png"],
       data: "06/2022",
     },
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center my-4">
+    <section
+      className="flex flex-col items-center justify-center my-4"
+      id="projects"
+    >
       <h1 className="text-4xl font-bold text-center my-4 animate-in slide-in-from-top-8 duration-500">
         <Trans i18nKey="favorite">
           {" "}
           <span className="text-secondary"> </span>{" "}
         </Trans>
       </h1>
-      <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-0 xl:gap-16 lg:px-48 xl:gap-y-6">
-        {projects.map((project, index) => (
+      <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-0 xl:gap-16 xl:gap-y-6">
+        {/* {projects.map((project, index) => (
           <ProjectCard key={index} index={index} project={project} />
+        ))} */}
+
+        {projects.slice(0, projectsQuantity).map((project, i) => (
+          <ProjectCard key={i} index={i} project={project} />
         ))}
       </div>
-    </main>
+    </section>
   );
 }
 

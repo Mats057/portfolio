@@ -60,7 +60,7 @@ export const SettingsMenu = () => {
           className={`isolate ring-1 ring-black/5 bg-foreground/30 z-20 shadow-lg backdrop-filter backdrop-blur-md rounded-full p-3 right-8 md:right-16 animate-in slide-in-from-right-28 duration-300 ${buttonPosition.position}`} 
           style={{ bottom: buttonPosition.bottom }}
         >
-          <Settings className="text-primary w-8 h-8 dark:text-primary stroke-1" />
+          <Settings className="text-primary w-8 h-8 stroke-1" />
         </button>
       </PopoverTrigger>
       <PopoverContent

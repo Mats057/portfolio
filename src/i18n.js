@@ -39,6 +39,7 @@ i18n
           details: "More details",
           technologies: "Technologies: ",
           developedBy: "Developed by ",
+          allProjects: "All Projects",
           voltar: "Back",
           projectsDesc: {
             moovie:
@@ -66,7 +67,7 @@ i18n
           },
           contactPage: {
             title: "Liked what you saw?",
-            subtitle: "Get in touch with me",
+            subtitle: "Get in touch with me!",
             name: "Name",
             email: "Email",
             message: "Message",
@@ -124,6 +125,7 @@ i18n
           details: "Mais detalhes",
           technologies: "Tecnologias: ",
           developedBy: "Desenvolvido por ",
+          allProjects: "Todos os Projetos",
           voltar: "Voltar",
           projectsDesc: {
             moovie:
@@ -151,7 +153,7 @@ i18n
           },
           contactPage: {
             title: "Gostou do que viu?",
-            subtitle: "Entre em contato comigo",
+            subtitle: "Entre em contato comigo!",
             name: "Nome",
             email: "Email",
             message: "Mensagem",
