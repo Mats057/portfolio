@@ -2,13 +2,21 @@ import { Trans, useTranslation } from "react-i18next";
 import ImgTest from "../assets/img-test.svg";
 import { SocialMenu } from "@/components/social-menu";
 import { TypeAnimation } from "react-type-animation";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function Home() {
   const [t] = useTranslation();
 
   return (
     <>
-      <section className="flex flex-1 flex-grow flex-col items-center min-h-screen justify-center lg:mx-12 animate-in fade-in duration-1000" id="home">
+      <section
+        className="flex flex-1 flex-grow flex-col items-center min-h-screen justify-center lg:mx-12 animate-in fade-in duration-1000"
+        id="home"
+      >
         <section className="flex flex-col lg:flex-row w-full items-center justify-center px-4 mb-8 md:mt-4 select-none">
           <div className="text-primary font-extrabold max-w-full">
             <h3 className="text-3xl md:text-5xl">{t("hi")}</h3>
@@ -40,7 +48,7 @@ function Home() {
               <a
                 className="px-6 py-3 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground text-accent-foreground hover:text-accent text-xl duration-300"
                 href="#about"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   const el = document.getElementById("about");
                   if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -48,17 +56,24 @@ function Home() {
               >
                 {t("about")}
               </a>
-              <a
-                className="px-6 py-3 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground hover:text-accent text-accent-foreground text-xl duration-300"
-                href="#projects"
-                onClick={e => {
-                  e.preventDefault();
-                  const el = document.getElementById("projects");
-                  if (el) el.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                {t("projects")}
-              </a>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    className="px-6 py-3 rounded-full font-bold bg-transparent border-2 hover:bg-secondary hover:border-secondary border-accent-foreground hover:text-accent text-accent-foreground text-xl duration-300 cursor-not-allowed opacity-60"
+                    href="#projects"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const el = document.getElementById("projects");
+                      if (el) el.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    {t("projects")}
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{t("maintenance")}</p>
+                </TooltipContent>
+              </Tooltip>
             </div>
           </div>
           <img

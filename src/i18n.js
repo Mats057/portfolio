@@ -18,6 +18,7 @@ i18n
           about: "About me",
           skills: "My <1>Hard Skills</1>",
           projects: "My Projects",
+          maintenance: "Under Maintenance👨‍🔧",
           home: "Home",
           contact: "Contact",
           contactCall: "Call me",
@@ -66,7 +67,7 @@ i18n
               "A project developed at ETEC, consisting of a free-theme program in C# created in Visual Studio to test my knowledge of listBox, checkBox, radioButton, and comboBox.",
           },
           contactPage: {
-            title: "Liked what you saw?",
+            title: "Want to know more?",
             subtitle: "Get in touch with me!",
             name: "Name",
             email: "Email",
@@ -104,6 +105,7 @@ i18n
           about: "Sobre mim",
           skills: "Minhas <1>Hard Skills</1>",
           projects: "Meus Projetos",
+          maintenance: "Em Manutenção👨‍🔧",
           home: "Página Inicial",
           contact: "Entrar em contato",
           contactCall: "Me chame",
@@ -152,7 +154,7 @@ i18n
               "Um projeto desenvolvido na ETEC, ele consiste em um programa de tema livre em C# feito no VS para testar meus conhecimentos em listBox, checkBox, radioButton e comboBox.",
           },
           contactPage: {
-            title: "Gostou do que viu?",
+            title: "Quer saber mais?",
             subtitle: "Entre em contato comigo!",
             name: "Nome",
             email: "Email",

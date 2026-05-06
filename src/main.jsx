@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Sobre from "./pages/Sobre.jsx";
-import Projetos from "./pages/Projetos.jsx";
+// import Projetos from "./pages/Projetos.jsx";
 import Projeto from "./pages/Projeto.jsx";
 import Default from "./pages/Default.jsx";
 import AllInOne from "./pages/AllInOne.jsx";
@@ -30,10 +30,10 @@ const router = createBrowserRouter([
             path: "about",
             element: <Sobre />,
           },
-          {
-            path: "projects",
-            element: <Projetos />,
-          },
+          // {
+          //   path: "projects",
+          //   element: <Projetos />,
+          // },
           {
             path: "*",
             element: <h1>Página não encontrada</h1>,
