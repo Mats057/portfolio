@@ -67,7 +67,6 @@ Esse projeto é o meu portfólio pessoal, onde mostro um pouco sobre mim, minhas
     - react-type-animation
 
 
-## Criado por Matheus Q. Zanutin - RM558801
-
+## Criado por Matheus Q. Zanutin
 
 
